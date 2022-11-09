@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Uoc_chung_so_lon_nhat {
+public class UocChungLonNhat {
     public static void main(String[] args) {
         int a;
         int b;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class So_Nguyen_to {
+public class SoNguyenTo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number:");

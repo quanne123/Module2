@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Vay_lai {
+public class VayLai {
     public static void main(String[] args) {
 
         double money = 1.0;
