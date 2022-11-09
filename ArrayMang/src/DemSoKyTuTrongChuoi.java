@@ -1,40 +1,31 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
-
 public class DemSoKyTuTrongChuoi {
-
-
-    static void characterCount(String inputString)
-    {
-
-        HashMap<Character, Integer> eachCharCountMap = new HashMap<Character, Integer>();
-        char[] charArray = inputString.toCharArray();
-
-
-
-        for (char c : charArray)
-        {
-            if(eachCharCountMap.containsKey(c))
-            {
-
-                eachCharCountMap.put(c, eachCharCountMap.get(c)+1);
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Nhập chiều dài cột");
+            int col = Integer.parseInt(scanner.nextLine());
+            System.out.println("Nhập chiều dài hàng");
+            int row = Integer.parseInt(scanner.nextLine());
+            int[][] arr = new int[col][row];
+            int sum = 0;
+            System.out.println("Cột cần tính tổng");
+            int num = Integer.parseInt(scanner.nextLine());
+            for (int i = 0; i < col; i++) {
+                for (int j = 0; j < row; j++) {
+                    System.out.println("Nhập phần tử [" + i + "]" + "[" + j + "]");
+                    arr[i][j] = Integer.parseInt(scanner.nextLine());
+                }
             }
-            else
-            {
-                eachCharCountMap.put(c, 1);
+            System.out.println(Arrays.deepToString(arr));
+            for (int i = 0; i < col; i++) {
+                for (int j = 0; j < row; j++) {
+                    if ( num == i){
+                        sum += arr[i][j];
+                    }
+                }
             }
+            System.out.println("Tổng độ dài cột "+num+" là:"+sum);
         }
-
-
-
-        System.out.println(eachCharCountMap);
     }
-
-    public static void main(String[] args) {
-        // TODO code application logic here
-        characterCount("Thich Hoc Lai");
-        characterCount("Thich Thi Lai");
-        characterCount("Thi Qua Mon");
-    }
-
-}
