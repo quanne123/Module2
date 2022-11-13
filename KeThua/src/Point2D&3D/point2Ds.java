@@ -1,9 +1,7 @@
-import java.util.Arrays;
-
-public class Point2D {
+public class point2D {
     private float x = 0.0f;
     private float y = 0.0f;
-    public Point2D(){
+    public point2D(){
     }
     public Point2D(float x,float y){
         this.x=x;
@@ -26,12 +24,8 @@ public class Point2D {
         this.y = y;
     }
 
-    public String getXY(){
-        float[] arr = new float[2] ;
-        arr[0] = x;
-        arr[1] = y;
-        return  Arrays.toString(arr);
-
+    public float[] getXY(){
+        return new float[]{this.x ,this.y};
     }
     public void setXY(float x,float y){
         this.x=x;
@@ -40,7 +34,7 @@ public class Point2D {
 
     @Override
     public String toString() {
-        return "Point2D{" +
+        return "Point2Ds{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';

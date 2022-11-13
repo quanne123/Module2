@@ -5,5 +5,6 @@ public class TestPoint2D {
         System.out.println("the X is: " + point2D.getX());
         System.out.println("the Y is: " + point2D.getY());
         System.out.println("the arr is: " + point2D.getXY());
+        System.out.println("Quan ne");
     }
 }
