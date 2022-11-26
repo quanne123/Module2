@@ -40,7 +40,7 @@ public class Rectangle extends Shape {
                 ", height=" + height +
                 "} " + super.toString() + "Area is a: " +  getArea() +  " Petermeter is a: " + getPetermeter();
     }
-    public void HowTocolor(){
+    public void howtoColor(){
 
     }
 }

@@ -1,4 +1,5 @@
 package Bai2;
+import ;
 
 public class ColorableTest {
     public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class ColorableTest {
                 Square square = (Square) shape;
                 if (square instanceof Colorable) {
                     System.out.println("");
-                    square.HowTocolor();
+                    square.howtoColor();
 
                     System.out.println(square);
 

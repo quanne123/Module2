@@ -30,5 +30,5 @@ public class Square extends Shape {
                 "side=" + side +
                 "} " + super.toString() + "Area is" + getArea();
     }
-    public void Howtocolor(){}
+    public void howtoColor(){}
 }

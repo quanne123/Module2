@@ -1,3 +1,4 @@
+package students;
 public class Students {
     private String name = "John";
     private String classes = "C02";

@@ -35,9 +35,5 @@ public abstract class  Shape implements Colorable {
                 ", filled=" + filled +
                 '}';
     }
-
-    @Override
-    public void HowTocolor() {
-
-    }
+    
 }

@@ -1,3 +1,5 @@
+package students;
+
 public class TestStudents {
     public static void main(String[] args) {
         Students students1 = new Students("Hoang", "A36");

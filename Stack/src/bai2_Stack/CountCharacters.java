@@ -4,28 +4,28 @@ import java.util.*;
 
 public class CountCharacters {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-                System.out.println("Nhập vào chuỗi kí tự");
-                String string = sc.nextLine();
-                String[] arr = string.split(" ");
+        System.out.print("Enter string: ");
+        String document = scanner.nextLine();
 
-                TreeMap<String, Integer> stringMap = new TreeMap<>();
-                int countS = 1;
-                for (int i = 0; i < arr.length; i++) {
-                    if (stringMap.containsKey(arr[i])) {
-                        countS++;
-                    }
-                    else {
-                        countS=1;
-                    }
-                    stringMap.put(arr[i], countS);
+        String[] arrayDocument = document.split(" ");
+        Map<String, Integer> numberWord = new TreeMap<>();
+        int value;
 
+        for (String item : arrayDocument) {
+            value = 0;
+            for (String s : arrayDocument) {
+                if (Objects.equals(item, s)) {
+                    value++;
                 }
-                System.out.println("Chuỗi kí tự trùng nhau");
-                System.out.println(stringMap);
-
+            }
+            if (!Objects.equals(item, "")) {
+                numberWord.put(item, value);
             }
         }
+        System.out.println(numberWord);
+    }
+}
 
 

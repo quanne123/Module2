@@ -33,5 +33,5 @@ public class Circle extends Shape implements Colorable {
                 "radius=" + radius +
                 "} " + super.toString() + "Area is: " +getArea() + "Petermeter is a: " + getPetermeter();
     }
-    public void Howtocolor(){}
+    public void howtoColor(){}
 }
