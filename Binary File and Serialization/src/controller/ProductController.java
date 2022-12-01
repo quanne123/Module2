@@ -1,11 +1,11 @@
-package Controller;
+package controller;
 
-import Service.IProductService;
-import Service.impl.ProductService;
+import service.IProductService;
+import service.impl.ProductService;
 
 import java.util.Scanner;
 
-public class Controller {
+public class ProductController {
     private static final Scanner sc = new Scanner(System.in);
     private final IProductService product = new ProductService();
 
