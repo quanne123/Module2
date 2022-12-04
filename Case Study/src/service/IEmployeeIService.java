@@ -2,9 +2,11 @@ package service;
 
 import model.Employee;
 
+import java.util.List;
+
 public interface IEmployeeIService extends IService {
 
-    void displayEmployee();
+    List<Employee> displayEmployee();
 
     void addEmployee();
 

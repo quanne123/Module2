@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class EmployeeController {
     public static void employeeManagement(){
-        List<Employee> employeeList = new ArrayList<>();
+//        List<Employee> employeeList = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
         IEmployeeIService iEmployeeIService = new EmployeeService();
@@ -65,11 +65,15 @@ public class EmployeeController {
                double newSalary = Double.parseDouble(sc.nextLine());
 
                Employee updateEmployee = new Employee(updateId,newName,newDateOfBirth,newGender,newNumberCard,newPhone,newEmail,newLevel,newLocation,newSalary);
+               iEmployeeIService.editEmployee(updateEmployee);
                break;
 
             case 5 :
                 MainMenu.displayMainMenu();
                 break;
+            default:
+                System.exit(1);
+                System.out.println("error");
 
 
 

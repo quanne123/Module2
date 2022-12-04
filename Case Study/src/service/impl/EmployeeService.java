@@ -10,20 +10,19 @@ import java.util.Scanner;
 
 public class EmployeeService implements IEmployeeIService {
     private static final Scanner sc = new Scanner(System.in);
+
+    public static List<Employee> employeeList = new ArrayList<>();
     @Override
-    public void displayEmployee() {
-        List<Employee> employeeList = new ArrayList<>();
-        System.out.println("List of Employee");
-        for (Employee employee : employeeList){
-            System.out.println(employee);
+    public  List<Employee> displayEmployee() {
+            return employeeList;
         }
 
 
-    }
+
 
     @Override
     public void addEmployee() {
-        List<Employee> employeeList = new ArrayList<>();
+
         int id;
         while (true){
             try {
@@ -77,7 +76,7 @@ public class EmployeeService implements IEmployeeIService {
     @Override
     public void deleteEmployee(int id) {
         Employee deleteEmployee = null;
-        List<Employee> employeeList = new ArrayList<>();
+
 
         for (Employee employee : employeeList){
             if (employee.getIdEmployee()== id){
@@ -94,7 +93,7 @@ public class EmployeeService implements IEmployeeIService {
 
     @Override
     public void editEmployee(Employee employee) {
-        List<Employee> employeeList = new ArrayList<>();
+
 
         for (Employee employee1 : employeeList ){
             if (employee1.getIdEmployee() == employee.getIdEmployee()){
