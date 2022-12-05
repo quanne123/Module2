@@ -10,8 +10,9 @@ import java.util.Scanner;
 
 public class EmployeeController {
     public static void employeeManagement(){
+        int choice;
 //        List<Employee> employeeList = new ArrayList<>();
-
+        do{
         Scanner sc = new Scanner(System.in);
         IEmployeeIService iEmployeeIService = new EmployeeService();
         System.out.println("1: Display list employees");
@@ -19,11 +20,12 @@ public class EmployeeController {
         System.out.println("3: Delete employee");
         System.out.println("4: Edit employee");
         System.out.println("5: Return main menu");
-        int choice = Integer.parseInt(sc.nextLine());
+            choice = Integer.parseInt(sc.nextLine());
 
-        switch (choice){
+        switch (choice) {
             case 1:
-                iEmployeeIService.displayEmployee();
+               List<Employee> list= iEmployeeIService.displayEmployee();
+                System.out.println(list);
                 break;
             case 2:
                 iEmployeeIService.addEmployee();
@@ -50,7 +52,7 @@ public class EmployeeController {
                 String newNumberCard = sc.nextLine();
 
                 System.out.println("Input new phone");
-               String newPhone = sc.nextLine();
+                String newPhone = sc.nextLine();
 
                 System.out.println("Input new email");
                 String newEmail = sc.nextLine();
@@ -62,27 +64,27 @@ public class EmployeeController {
                 String newLocation = sc.nextLine();
 
                 System.out.println("Input new salary");
-               double newSalary = Double.parseDouble(sc.nextLine());
+                double newSalary = Double.parseDouble(sc.nextLine());
 
-               Employee updateEmployee = new Employee(updateId,newName,newDateOfBirth,newGender,newNumberCard,newPhone,newEmail,newLevel,newLocation,newSalary);
-               iEmployeeIService.editEmployee(updateEmployee);
-               break;
+                Employee updateEmployee = new Employee(updateId, newName, newDateOfBirth, newGender, newNumberCard, newPhone, newEmail, newLevel, newLocation, newSalary);
+                iEmployeeIService.editEmployee(updateEmployee);
+                break;
 
-            case 5 :
+            case 5:
                 MainMenu.displayMainMenu();
                 break;
             default:
                 System.exit(1);
                 System.out.println("error");
-
-
-
-
-
-
-
-
-
         }
+
+
+
+
+
+
+
+
+        }while (choice!=5);
     }
 }

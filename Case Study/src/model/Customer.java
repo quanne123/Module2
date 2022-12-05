@@ -12,6 +12,7 @@ public class Customer extends Person {
         super( name, dateOfBirth, gender, numberCard, phone, email);
         this.typeCustomer = typeCustomer;
         this.address = address;
+        this.idCustomer= idCustomer;
     }
 
     public int getIdCustomer() {

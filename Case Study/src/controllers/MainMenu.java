@@ -43,6 +43,7 @@ public class MainMenu {
                         System.out.println("Invalid Choice");
 
 
+                        break;
                 }
 
 

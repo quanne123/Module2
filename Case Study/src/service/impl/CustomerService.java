@@ -13,22 +13,21 @@ public class CustomerService implements ICustomerIService {
 //    int idCustomer, String name, String dateOfBirth, String gender, String numberCard, String phone, String email, String typeCustomer, String address) {
 //        super( name, dateOfBirth, gender, numberCard, phone, email);
 
+
     private static final Scanner sc = new Scanner(System.in);
+
+    public static List<Customer> customers = new LinkedList<>();
 
 
     @Override
-    public void displayCustomer() {
-        List<Customer> customers = new LinkedList<>();
-        System.out.println("List of Customer");
-        for (Customer customer : customers){
-            System.out.println(customer);
-        }
+    public List<Customer> displayCustomer() {
+      return customers;
 
     }
 
     @Override
     public void addCustomer() {
-        List<Customer> customers = new LinkedList<>();
+
         int id;
         while (true){
             try {
@@ -77,7 +76,7 @@ public class CustomerService implements ICustomerIService {
 
     @Override
     public void editCustomer(Customer customer) {
-        List<Customer> customers = new LinkedList<>();
+
 
         for (Customer customer1 : customers){
             if (customer1.getIdCustomer()== customer.getIdCustomer()){

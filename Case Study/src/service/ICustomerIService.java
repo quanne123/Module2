@@ -2,8 +2,10 @@ package service;
 
 import model.Customer;
 
+import java.util.List;
+
 public interface ICustomerIService extends IService {
-    void displayCustomer();
+   List<Customer> displayCustomer();
 
     void addCustomer();
 
