@@ -7,7 +7,7 @@ public abstract class Facility {
     private int numberOfTenants;
     private String rentalType;
 
-    public Facility(String nameService, int area, int costRent, int numberOfTenants, String rentalType) {
+    protected Facility(String nameService, int area, int costRent, int numberOfTenants, String rentalType) {
         this.nameService = nameService;
         this.area = area;
         this.costRent = costRent;
