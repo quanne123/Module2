@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IEmployeeIService extends IService {
 
-    List<Employee> displayEmployee();
+    List<Employee> getEmployee();
 
-    void addEmployee();
+    void addEmployee(Employee employee);
 
     void deleteEmployee(int id);
 

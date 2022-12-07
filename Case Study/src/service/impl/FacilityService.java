@@ -27,7 +27,7 @@ public class FacilityService  implements IFacilityIService {
 
 
     @Override
-    public void displayFacility() {
+    public void getFacility() {
         for (Map.Entry<Facility, Integer> entry : facilityList.entrySet()){
             System.out.println(entry);
         }
@@ -39,7 +39,7 @@ public class FacilityService  implements IFacilityIService {
     }
 
     @Override
-    public void displayListMaintenance() {
+    public void getFacilityMaintance() {
         for (Map.Entry<Facility, Integer> entry : facilityList.entrySet()){
             if (entry.getValue() >= 5 ){
                 System.out.println("Entry can bao tri");

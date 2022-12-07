@@ -13,7 +13,7 @@ public class EmployeeService implements IEmployeeIService {
 
     public static List<Employee> employeeList = new ArrayList<>();
     @Override
-    public  List<Employee> displayEmployee() {
+    public  List<Employee> getEmployee() {
             return employeeList;
         }
 
@@ -21,53 +21,54 @@ public class EmployeeService implements IEmployeeIService {
 
 
     @Override
-    public void addEmployee() {
+    public void addEmployee(Employee employee) {
+        employeeList.add(employee);
 
-        int id;
-        while (true){
-            try {
-            System.out.println("Enter id of Employee");
-            id = Integer.parseInt(sc.nextLine());
-            for (Employee employee : employeeList){
-                if (employee.getIdEmployee() == id) {
-                        throw new IOException("Enter id again");
-                    }
-                }
-            break;
-            }catch (NumberFormatException e){
-                System.out.println("Enter a number");
-            }catch (IOException e){
-                System.out.println(e.getMessage());
-            }
-        }
-        System.out.println("Enter name of Employee");
-        String name = sc.nextLine();
-
-        System.out.println("Enter date of birth");
-        String dateOfBirth = sc.nextLine();
-
-        System.out.println("Enter gender of Employee");
-        String gender = sc.nextLine();
-
-        System.out.println("Enter number card of Employee");
-        String numberCard = sc.nextLine();
-
-        System.out.println("Enter a phone");
-        String phone = sc.nextLine();
-
-        System.out.println("Enter Email");
-        String email = sc.nextLine();
-
-        System.out.println("Enter level");
-        String level = sc.nextLine();
-
-        System.out.println("Enter location");
-        String location = sc.nextLine();
-
-        System.out.println("Enter a Salary ");
-        double salary = Double.parseDouble(sc.nextLine());
-
-        employeeList.add(new Employee(id,name,dateOfBirth,gender,numberCard,phone,email,level,location,salary));
+//        int id;
+//        while (true){
+//            try {
+//            System.out.println("Enter id of Employee");
+//            id = Integer.parseInt(sc.nextLine());
+//            for (Employee employee : employeeList){
+//                if (employee.getIdEmployee() == id) {
+//                        throw new IOException("Enter id again");
+//                    }
+//                }
+//            break;
+//            }catch (NumberFormatException e){
+//                System.out.println("Enter a number");
+//            }catch (IOException e){
+//                System.out.println(e.getMessage());
+//            }
+//        }
+//        System.out.println("Enter name of Employee");
+//        String name = sc.nextLine();
+//
+//        System.out.println("Enter date of birth");
+//        String dateOfBirth = sc.nextLine();
+//
+//        System.out.println("Enter gender of Employee");
+//        String gender = sc.nextLine();
+//
+//        System.out.println("Enter number card of Employee");
+//        String numberCard = sc.nextLine();
+//
+//        System.out.println("Enter a phone");
+//        String phone = sc.nextLine();
+//
+//        System.out.println("Enter Email");
+//        String email = sc.nextLine();
+//
+//        System.out.println("Enter level");
+//        String level = sc.nextLine();
+//
+//        System.out.println("Enter location");
+//        String location = sc.nextLine();
+//
+//        System.out.println("Enter a Salary ");
+//        double salary = Double.parseDouble(sc.nextLine());
+//
+//        employeeList.add(new Employee(id,name,dateOfBirth,gender,numberCard,phone,email,level,location,salary));
 
 
 
