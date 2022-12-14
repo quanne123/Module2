@@ -3,19 +3,20 @@ package view;
 import java.util.Scanner;
 
 public class FuramaVIew {
-//    public final EmployeeView employeeView = new EmployeeView();
 
+
+//private final EmployeeView employeeView = new EmployeeView();
 
     public  void displayMainMenu() {
-        CustomerView customerView = new CustomerView();
+       CustomerView customerView = new CustomerView();
         EmployeeView employeeView = new EmployeeView();
+        FacilityView facilityView = new FacilityView();
+
 
         Scanner sc = new Scanner(System.in);
         int option;
 
         do {
-
-
             System.out.println("1: Employee Management");
             System.out.println("2: Customer Management");
             System.out.println("3: Facility Management");
@@ -25,17 +26,19 @@ public class FuramaVIew {
             option = Integer.parseInt(sc.nextLine());
             switch (option) {
                 case 1:
-                   employeeView.EmployeeManagement();
+                   employeeView.displayMenuEmployee();
                     break;
                 case 2:
-                    customerView.CustomerManagement();
+                  customerView.displayMenuCustomer();
                     break;
+                case 3 :
+                    facilityView.displayFacilityMenu();
                 case 6:
                     System.exit(1);
                 default:
                     System.out.println("Invalid choice");
                     break;
             }
-        } while (option != 6);
+        } while (true);
     }
 }

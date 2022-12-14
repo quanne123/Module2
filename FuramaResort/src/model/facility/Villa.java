@@ -47,4 +47,10 @@ public class Villa extends Facility {
                 ", floor=" + floor +
                 "} " + super.toString();
     }
+//      private String standardRoom;
+//    private int areaPool;
+//    private int floor;
+    public String formatCSVVilla(){
+        return this.formatCSVFacility() + this.standardRoom + "," + this.areaPool +"," + this.floor;
+    }
 }

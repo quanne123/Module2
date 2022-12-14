@@ -10,7 +10,7 @@ import java.util.List;
 
 public class EmployeeServiceImpl implements IEmployeeService {
 //    private static final List<Employee> employeeList = new ArrayList<>();
-    private static final String EMPLOYEE_PATH_NAME = "E:\\Codegym\\Module2\\FuramaResort\\src\\data\\employee.csv";
+    private final String EMPLOYEE_PATH_NAME = "src/data/employee.csv";
     private final IEmployeeIOService employeeIOService = new EmployeeIOServiceImpl();
 
 
@@ -47,8 +47,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
             System.out.println("Error");
         }else {
             employeeList.remove(deleteEmployee);
+            this.employeeIOService.writeFile(EMPLOYEE_PATH_NAME,employeeList);
         }
-        this.employeeIOService.writeFile(EMPLOYEE_PATH_NAME,employeeList);
     }
 
     @Override

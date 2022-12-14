@@ -1,11 +1,18 @@
 package model.facility;
 
-public abstract class Facility {
+import model.person.Employee;
+import model.person.Person;
+  abstract class Facility extends Person  {
     private String serviceName;
     private int area;
     private int costRent;
     private int numberOfTenants;
     private String typeRent;
+
+//    Facility f1 = ;
+
+
+
 
     protected Facility() {
     }
@@ -67,5 +74,10 @@ public abstract class Facility {
                 ", numberOfTenants=" + numberOfTenants +
                 ", typeRent='" + typeRent + '\'' +
                 '}';
+    }
+//    (String serviceName, int area, int costRent, int numberOfTenants, String typeRent
+    public String formatCSVFacility(){
+        return this.serviceName +"," + this.area + "," + this.costRent + ","
+                + this.numberOfTenants +"," + this.typeRent;
     }
 }

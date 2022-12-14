@@ -2,21 +2,16 @@ package view;
 
 import controller.EmployeeController;
 import model.person.Employee;
-import service.impl.EmployeeServiceImpl;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeView {
-//    private static final EmployeeServiceImpl EMPLOYEE_SERVICE_IMPL = new EmployeeServiceImpl();
-//    private final List<Employee> employeeList = new ArrayList<>();
-//
+
     private final FuramaVIew furamaVIew = new FuramaVIew();
     private final EmployeeController employeeController = new EmployeeController();
-    public  void EmployeeManagement() {
 
-
+    public void displayMenuEmployee() {
         Scanner sc = new Scanner(System.in);
         do {
             System.out.println("1: Display Employee");

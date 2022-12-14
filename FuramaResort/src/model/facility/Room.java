@@ -1,7 +1,9 @@
 package model.facility;
 
 public class Room extends Facility {
+
     private String freeService;
+
 
     public Room() {
     }
@@ -24,6 +26,9 @@ public class Room extends Facility {
         return "Room{" +
                 "freeService='" + freeService + '\'' +
                 "} " + super.toString();
+    }
+    public String formatCSVRoom(){
+        return this.formatCSVFacility() + "," + this.freeService;
     }
 }
 

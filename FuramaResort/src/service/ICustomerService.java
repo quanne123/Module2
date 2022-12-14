@@ -10,9 +10,6 @@ public interface ICustomerService {
 
     void addCustomer(Customer customer) throws IOException;
 
-    void EditCustomer(Customer customer) throws IOException;
-
-
-
-
+    void editCustomer(Customer customer) throws IOException;
+    
 }

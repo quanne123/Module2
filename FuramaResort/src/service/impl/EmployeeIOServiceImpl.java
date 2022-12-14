@@ -44,7 +44,7 @@ public class EmployeeIOServiceImpl implements IEmployeeIOService {
             file.createNewFile();
         }
 
-        FileWriter fileWriter = new FileWriter(path);
+        FileWriter fileWriter = new FileWriter(file);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
         for (Employee employee : employeeList){

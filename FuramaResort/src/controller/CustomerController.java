@@ -27,7 +27,7 @@ public class CustomerController {
 
     public void editCustomer(Customer customer){
         try {
-            this.customerService.EditCustomer(customer);
+            this.customerService.editCustomer(customer);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

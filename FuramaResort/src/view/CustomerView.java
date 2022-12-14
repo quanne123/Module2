@@ -2,7 +2,6 @@ package view;
 
 import controller.CustomerController;
 import model.person.Customer;
-import service.impl.CustomerServiceimpl;
 
 import java.util.List;
 import java.util.Scanner;
@@ -13,7 +12,7 @@ public class CustomerView {
     private final CustomerController customerController = new CustomerController();
 
     //    private static final CustomerServiceimpl CUSTOMER_SERVICEIMPL = new CustomerServiceimpl();
-    public void CustomerManagement() {
+    public void displayMenuCustomer() {
         Scanner sc = new Scanner(System.in);
         do {
 

@@ -5,11 +5,10 @@ import service.ICustomerIOService;
 import service.ICustomerService;
 
 import java.io.IOException;
-import java.util.LinkedList;
 import java.util.List;
 
 public class CustomerServiceimpl implements ICustomerService {
-    private final String CUSTOMER_PATH_NAME = "E:\\Codegym\\Module2\\FuramaResort\\src\\data\\customer.csv";
+    private final String CUSTOMER_PATH_NAME = "src/data/customer.csv";
     private final ICustomerIOService customerIOService = new CustomerIOServiceImpl();
 //    private static final List<Customer> customerList = new LinkedList<>();
 //    static {
@@ -24,8 +23,8 @@ public class CustomerServiceimpl implements ICustomerService {
 
     @Override
     public void addCustomer(Customer customer) throws IOException {
-        List<Customer> customerList = new LinkedList<>();
-        this.customerIOService.readFile(CUSTOMER_PATH_NAME,false);
+        List<Customer> customerList = this.customerIOService.readFile(CUSTOMER_PATH_NAME,false);
+//        this.customerIOService.readFile(CUSTOMER_PATH_NAME,false);
         for (Customer customer1 : customerList){
             if (customer1.getIdCustomer() == customer.getIdCustomer()){
                 System.out.println("Id exist");
@@ -37,10 +36,9 @@ public class CustomerServiceimpl implements ICustomerService {
 
     }
 
-    @Override
-    public void EditCustomer(Customer customer) throws IOException {
-        List<Customer> customerList = new LinkedList<>();
-        this.customerIOService.readFile(CUSTOMER_PATH_NAME,false);
+    public void editCustomer(Customer customer) throws IOException {
+        List<Customer> customerList = this.customerIOService.readFile(CUSTOMER_PATH_NAME,false);
+
         for (Customer customer1 : customerList){
             if (customer1.getIdCustomer()==customer.getIdCustomer()){
                 customer1.setName(customer.getName());

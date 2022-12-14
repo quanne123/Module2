@@ -1,5 +1,7 @@
 package model.person;
 
+import model.facility.Room;
+
 public abstract class Person {
     private String name;
     private String dateOfBirth;
@@ -7,6 +9,9 @@ public abstract class Person {
     private String idCard;
     private String phone;
     private String email;
+
+    Person p = new Customer();
+    Person p1 = new Room();
 
     protected Person() {
     }
