@@ -8,8 +8,7 @@ public class Customer extends Person{
     public Customer() {
     }
 
-    public Customer(String name, String birthDay, String gender, String idCard, String phone,
-                    String email, int idCustomer, String typeCustomer, String address) {
+    public Customer(String name, String birthDay, String gender, String idCard, String phone, String email, int idCustomer, String typeCustomer, String address) {
         super(name, birthDay, gender, idCard, phone, email);
         this.idCustomer = idCustomer;
         this.typeCustomer = typeCustomer;
@@ -47,5 +46,9 @@ public class Customer extends Person{
                 ", typeCustomer='" + typeCustomer + '\'' +
                 ", address='" + address + '\'' +
                 "} " + super.toString();
+    }
+
+    public String formatCSVCustomer() {
+        return  this.formatCSVPerson() + "," + this.idCustomer + "," + this.typeCustomer + "," + this.address;
     }
 }

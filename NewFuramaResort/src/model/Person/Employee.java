@@ -9,10 +9,9 @@ public class Employee  extends Person{
     public Employee() {
     }
 
-    public Employee(String name, String birthDay, String gender, String idCard, String phone, String email
-            , int idCustomer, String level, String position, int salary) {
+    public Employee(String name, String birthDay, String gender, String idCard, String phone, String email, int idEmployee, String level, String position, int salary) {
         super(name, birthDay, gender, idCard, phone, email);
-        this.idEmployee = idCustomer;
+        this.idEmployee = idEmployee;
         this.level = level;
         this.position = position;
         this.salary = salary;
@@ -53,12 +52,13 @@ public class Employee  extends Person{
     @Override
     public String toString() {
         return "Employee{" +
-                "idCustomer=" + idEmployee +
+                "idEmployee=" + idEmployee +
                 ", level='" + level + '\'' +
                 ", position='" + position + '\'' +
                 ", salary=" + salary +
                 "} " + super.toString();
     }
+
     public  String formatCSVEmployee(){
         return this.formatCSVPerson() + "," + this.idEmployee + "," + this.level +"," + this.position + "," + this.position;
     }
